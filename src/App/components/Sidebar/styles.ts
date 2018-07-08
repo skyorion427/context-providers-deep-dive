@@ -7,6 +7,14 @@ export const SidebarConfig = {
   width: rem(300),
 };
 
+export const Heading = styled.h1`
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 ${({theme}: IThemeProps) => theme.spacings.sm};
+  height: ${({theme}: IThemeProps) => theme.spacings.header.height};
+`;
+
 export default (Sidebar: React.SFC<ISidebarProps>) => styled(Sidebar)`
   background-color: ${({theme}: IThemeProps) => theme.colors.gray.dark};
   position: fixed;

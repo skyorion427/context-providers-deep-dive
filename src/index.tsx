@@ -10,15 +10,19 @@ import theme from './styles/themes/base.styles';
 import globalStyles from './styles/global.styles';
 
 import App from './App';
+import ConfigProvider from 'App/providers/Config/ConfigProducer';
+import config from './App/app.config';
 
 globalStyles();
 registerServiceWorker();
 
 const render = async (Component: any) => {
   return ReactDOM.render(
-    <ThemeProvider theme={theme}>
-      <Component history={history} />
-    </ThemeProvider>,
+    <ConfigProvider config={config}>
+      <ThemeProvider theme={theme}>
+        <Component history={history} />
+      </ThemeProvider>
+    </ConfigProvider>,
     document.getElementById('root') as HTMLElement
   );
 };

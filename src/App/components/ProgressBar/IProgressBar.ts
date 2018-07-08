@@ -1,1 +1,4 @@
-export interface IProgressBarProps extends React.HTMLAttributes<HTMLElement> {}
+export interface IProgressBarProps extends React.HTMLAttributes<HTMLElement> {
+  value: number;
+  max: number;
+}

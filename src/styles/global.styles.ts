@@ -1,6 +1,5 @@
 import {injectGlobal} from 'styled-components';
-import {HeaderConfig} from 'App/components/Header/styles';
-import {SidebarConfig} from 'App/components/Sidebar/styles';
+import {spacings} from './themes/base.styles';
 
 export default () => injectGlobal`
   * {
@@ -15,15 +14,15 @@ export default () => injectGlobal`
   }
 
   body {
-    transition: 0.5s opacity ease-in;
+    transition: 0.5s opacity ease-in-out;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: white;
     height: 100%;
     width: 100%;
     margin: 0;
-    padding-top: ${HeaderConfig.height};
-    padding-right: ${SidebarConfig.width};
+    padding-top: ${spacings.header.height};
+    padding-right: ${spacings.sidebar.width};
     opacity: 1;
   }
 

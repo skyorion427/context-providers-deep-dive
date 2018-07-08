@@ -19,7 +19,7 @@ const App: React.SFC<IAppProps> = ({history}) => (
       />
 
       <Zoom timeout={500} in>
-        <Main>Main</Main>
+        <Main />
       </Zoom>
 
       <RouteWithTransition
