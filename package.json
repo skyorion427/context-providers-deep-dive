@@ -1,0 +1,95 @@
+{
+  "name": "context-providers-deep-dive",
+  "version": "0.1.0",
+  "homepage": "https://context-providers-deep-dive.stephencorwin.me",
+  "config": {
+    "prettier": "**/*.{ts,tsx,css,json}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.+(ts|tsx|js)",
+      "!<rootDir>/**/*.d.ts",
+      "!<rootDir>/node_modules"
+    ]
+  },
+  "jest-junit": {
+    "output": "./coverage/junit.xml"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "cross-env CI=true react-scripts-ts test --env=jsdom --coverage --testResultsProcessor ./node_modules/jest-junit",
+    "test:watch": "react-scripts-ts test --env=jsdom",
+    "local": "cross-env npm run build && npm run serve",
+    "serve": "serve -s ./build",
+    "deploy": "cross-env npm run build && now && now alias",
+    "lint": "cross-env prettier --write \"$npm_package_config_prettier\" && tslint --fix -p .",
+    "lint:check": "tslint-config-prettier-check ./tslint.json"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/react-fontawesome": "0.0.19",
+    "@material-ui/core": "^1.2.1",
+    "apollo-cache-inmemory": "^1.2.2",
+    "apollo-cache-persist": "^0.1.1",
+    "apollo-client": "^2.3.2",
+    "apollo-link": "^1.2.2",
+    "apollo-link-context": "^1.0.8",
+    "apollo-link-http": "^1.5.4",
+    "apollo-link-state": "^0.4.1",
+    "apollo-link-ws": "^1.0.8",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "lodash": "^4.17.10",
+    "react": "^16.3.2",
+    "react-apollo": "^2.1.4",
+    "react-dom": "^16.3.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts-ts": "2.15.1",
+    "react-styled-flexboxgrid": "^2.2.0",
+    "styled-components": "^3.2.6",
+    "subscriptions-transport-ws": "^0.9.9",
+    "typescript-fsa": "^3.0.0-beta-1"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.13.1",
+    "@types/jest": "^22.2.3",
+    "@types/lodash": "^4.14.110",
+    "@types/node": "^10.0.7",
+    "@types/prop-types": "^15.5.3",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-router": "^4.0.25",
+    "@types/react-router-dom": "^4.2.6",
+    "@types/ws": "^5.1.1",
+    "cross-env": "^5.1.5",
+    "husky": "^1.0.0-rc.6",
+    "install": "^0.11.0",
+    "jest": "^22.4.3",
+    "jest-junit": "^3.7.0",
+    "jest-localstorage-mock": "^2.2.0",
+    "lint-staged": "^7.1.0",
+    "npm": "^6.1.0",
+    "prettier": "^1.12.1",
+    "serve": "^6.5.6",
+    "ts-loader": "^3.5.0",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.2.0",
+    "tslint-plugin-prettier": "^1.3.0",
+    "typescript": "^2.8.3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts", "@types/**/*.ts"]
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "defaultSeverity": "warning",
+  "rules": {
+    "prettier": true,
+    "member-access": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "jsx-boolean-value": ["never"],
+    "no-empty-interface": false,
+    "variable-name": false,
+    "no-string-literal": false
+  }
+}

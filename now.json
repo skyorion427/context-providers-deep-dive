@@ -1,0 +1,11 @@
+{
+  "name": "context-providers-deep-dive",
+  "alias": "context-providers-deep-dive.stephencorwin.me",
+  "public": false,
+  "files": ["./build"],
+  "type": "static",
+  "static": {
+    "public": "/build",
+    "rewrites": [{"source": "**", "destination": "/index.html"}]
+  }
+}
