@@ -16,7 +16,7 @@ export const colors = {
   gray: Object.assign(String('#CCCCCC'), {
     base: '#CCCCCC',
     light: '#EBEBEB',
-    dark: '#7d7d7d',
+    dark: '#252525',
   }),
   blue: Object.assign(String('#297ffc'), {
     base: '#297ffc',
@@ -102,9 +102,9 @@ export const zindexes = {
   base: '1',
   controls: '100',
   header: '200',
-  footer: '200',
-  screen: '300',
-  overlay: '400',
+  sidebar: '300',
+  screen: '400',
+  overlay: '500',
 };
 
 export const shadows = {
@@ -115,7 +115,6 @@ export const shadows = {
     4
   )} 0 rgba(0, 0, 0, 0.12)`,
   text: `${rem(1)} ${rem(1)} ${rem(2)} #000000`,
-  unit: `${rem(1)} ${rem(1)} ${rem(2)} rgba(0, 0, 0, 0.5)`,
 };
 
 export default {

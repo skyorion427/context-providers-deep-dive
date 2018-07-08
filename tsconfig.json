@@ -4,7 +4,7 @@
     "rootDir": "./",
     "outDir": "build/dist",
     "module": "commonjs",
-    "target": "esnext",
+    "target": "es2018",
     "lib": ["es6", "esnext", "dom"],
     "sourceMap": true,
     "allowJs": true,

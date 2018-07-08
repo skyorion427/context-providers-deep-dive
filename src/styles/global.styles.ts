@@ -1,5 +1,6 @@
 import {injectGlobal} from 'styled-components';
 import {HeaderConfig} from 'App/components/Header/styles';
+import {SidebarConfig} from 'App/components/Sidebar/styles';
 
 export default () => injectGlobal`
   * {
@@ -15,19 +16,20 @@ export default () => injectGlobal`
 
   body {
     transition: 0.5s opacity ease-in;
-    background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+    color: white;
     height: 100%;
     width: 100%;
     margin: 0;
     padding-top: ${HeaderConfig.height};
+    padding-right: ${SidebarConfig.width};
     opacity: 1;
   }
 
   #root {
-    display: flex;
-    flex-direction: row;
+    height: 100%;
+    position: relative;
   }
 
   button {
