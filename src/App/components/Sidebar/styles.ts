@@ -10,6 +10,7 @@ export const SidebarConfig = {
 export const Heading = styled.h1`
   display: flex;
   align-items: center;
+  box-shadow: ${({theme}: IThemeProps) => theme.shadows.default};
   margin: 0;
   padding: 0 ${({theme}: IThemeProps) => theme.spacings.sm};
   height: ${({theme}: IThemeProps) => theme.spacings.header.height};

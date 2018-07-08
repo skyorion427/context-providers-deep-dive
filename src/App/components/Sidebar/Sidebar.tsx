@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import {Link} from 'react-router-dom';
 import {ISidebarProps} from './ISidebar';
 import ConfigConsumer from '../../providers/Config/ConfigConsumer';
 import {IConfigContext} from '../../providers/Config/IConfigContext';
@@ -9,11 +9,13 @@ export const Sidebar: React.SFC<ISidebarProps> = ({...props}) => (
   <ConfigConsumer>
     {({title, subTitle}: IConfigContext) => (
       <aside {...props}>
-        <Heading>
-          {title}
-          <br />
-          {subTitle}
-        </Heading>
+        <Link to="/">
+          <Heading>
+            {title}
+            <br />
+            {subTitle}
+          </Heading>
+        </Link>
         <nav>
           <ul>
             <li>
