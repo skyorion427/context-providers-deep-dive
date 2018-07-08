@@ -2,7 +2,7 @@ import * as React from 'react';
 import {IConfigProviderProps} from './IConfigContext';
 import ConfigContext from './index';
 
-export const ConfigProvider: React.SFC<IConfigProviderProps> = ({
+const ConfigProvider: React.SFC<IConfigProviderProps> = ({
   config,
   children,
 }) => (

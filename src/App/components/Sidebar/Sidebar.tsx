@@ -5,7 +5,7 @@ import ConfigConsumer from '../../providers/Config/ConfigConsumer';
 import {IConfigContext} from '../../providers/Config/IConfigContext';
 import {Heading} from './styles';
 
-export const Sidebar: React.SFC<ISidebarProps> = ({...props}) => (
+const Sidebar: React.SFC<ISidebarProps> = ({...props}) => (
   <ConfigConsumer>
     {({title, subTitle}: IConfigContext) => (
       <aside {...props}>

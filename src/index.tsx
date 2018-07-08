@@ -10,7 +10,7 @@ import theme from './styles/themes/base.styles';
 import globalStyles from './styles/global.styles';
 
 import App from './App';
-import ConfigProvider from 'App/providers/Config/ConfigProducer';
+import ConfigProvider from 'App/providers/Config/ConfigProvider';
 import config from './App/app.config';
 
 globalStyles();

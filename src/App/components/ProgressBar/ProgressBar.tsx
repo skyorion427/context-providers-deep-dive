@@ -3,11 +3,7 @@ import * as React from 'react';
 import {IProgressBarProps} from './IProgressBar';
 import {Fill} from './styles';
 
-export const ProgressBar: React.SFC<IProgressBarProps> = ({
-  value,
-  max,
-  ...props
-}) => (
+const ProgressBar: React.SFC<IProgressBarProps> = ({value, max, ...props}) => (
   <div {...props}>
     <Fill style={{width: `${value / max * 100}%`}} />
   </div>

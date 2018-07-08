@@ -7,7 +7,7 @@ import {IConfigContext} from 'App/providers/Config/IConfigContext';
 import {Author, Container} from './styles';
 import {Heading} from './styles';
 
-export const SplashPage: React.SFC<ISplashPageProps> = ({...props}) => (
+const SplashPage: React.SFC<ISplashPageProps> = ({...props}) => (
   <ConfigConsumer>
     {({title, subTitle, author}: IConfigContext) => (
       <Link {...props} to="/chapter">

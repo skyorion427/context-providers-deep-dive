@@ -4,7 +4,7 @@ import {IHeaderProps} from './IHeader';
 import ProgressBar from '../ProgressBar';
 import {Left, Right, Content} from './styles';
 
-export const Header: React.SFC<IHeaderProps> = ({...props}) => (
+const Header: React.SFC<IHeaderProps> = ({...props}) => (
   <header {...props}>
     <Left>
       <label>1/6</label>

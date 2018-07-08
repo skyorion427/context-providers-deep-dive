@@ -5,6 +5,7 @@ import {SidebarConfig} from '../Sidebar/styles';
 import {rem} from 'styles/mixins/units';
 
 export const Left = styled.div`
+  box-shadow: ${({theme}: IThemeProps) => theme.shadows.right};
   width: ${({theme}: IThemeProps) => theme.spacings.header.heightInner};
   position: relative;
 
@@ -31,7 +32,8 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   height: ${({theme}: IThemeProps) => theme.spacings.header.heightInner};
-  padding: ${({theme}: IThemeProps) => theme.spacings.xs};
+  padding: ${({theme}: IThemeProps) =>
+    `${theme.spacings.xs} ${theme.spacings.sm}`};
 
   h1 {
     color: ${({theme}: IThemeProps) => theme.colors.white.muted};
