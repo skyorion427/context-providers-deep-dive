@@ -65,7 +65,7 @@ const Header: React.SFC<IHeaderProps> = ({...props}) => (
                       Next
                     </LabelButton>
                     {lesson.github && (
-                      <IconButton to={lesson.github}>
+                      <IconButton to={lesson.github} target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                       </IconButton>
                     )}
