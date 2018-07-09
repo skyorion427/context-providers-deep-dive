@@ -1,6 +1,8 @@
 export default {
   title: 'Model extended',
   description: 'The classic example of a Context Provider used for theming.',
+  github:
+    'https://github.com/stephencorwin/context-providers-deep-dive/tree/master/src/Lessons/ModelExtended',
   slides: [
     {
       title: 'Use Case',

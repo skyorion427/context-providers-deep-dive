@@ -1,4 +1,5 @@
 export interface ISlide {
   title: string;
-  content: string;
+  content?: string;
+  component?: any;
 }

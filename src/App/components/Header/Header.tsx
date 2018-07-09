@@ -64,9 +64,11 @@ const Header: React.SFC<IHeaderProps> = ({...props}) => (
                     <LabelButton to={getNextSlideUri()} replace>
                       Next
                     </LabelButton>
-                    <IconButton to="">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </IconButton>
+                    {lesson.github && (
+                      <IconButton to={lesson.github}>
+                        <FontAwesomeIcon icon={faGithub} />
+                      </IconButton>
+                    )}
                   </ButtonWrapper>
                 </ContentWrapper>
                 <ProgressBar value={slidePosition} max={lesson.slides.length} />

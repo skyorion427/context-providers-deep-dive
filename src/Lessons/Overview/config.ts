@@ -1,31 +1,35 @@
+import overviewMD from './overview.md';
+import historyMD from './history.md';
+import redux_00 from './redux_00.md';
+import redux_01 from './redux_01.md';
+import redux_02 from './redux_02.md';
+
 export default {
   title: 'Overview',
   description:
     'A brief course introduction to help with setting the `context`, ;)',
+  github:
+    'https://github.com/stephencorwin/context-providers-deep-dive/tree/master/src/Lessons/Overview',
   slides: [
     {
       title: 'Overview',
-      content: `
-        # Context Providers...
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      `,
+      content: overviewMD,
     },
     {
       title: 'History',
-      content: `
-        # History...
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      `,
+      content: historyMD,
     },
     {
-      title: 'Why Now?',
-      content: `
-        # Why Now?...
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      `,
+      title: 'Redux',
+      content: redux_00,
+    },
+    {
+      title: 'Redux cont.',
+      content: redux_01,
+    },
+    {
+      title: 'Redux cont.',
+      content: redux_02,
     },
   ],
 };
