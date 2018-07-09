@@ -18,7 +18,7 @@ const MyComponent : React.SFC<IMyComponentProps> = ({queryForData}) => (
   <div>
     {queryforData.loading && <div>Loading</div>}
     {!queryforData.loading && queryforData.data && (
-      <div>{data.foo}</div>
+      <div>{queryforData.data.foo}</div>
     )}
   </div>
 )
