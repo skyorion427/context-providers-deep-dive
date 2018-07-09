@@ -15,6 +15,7 @@ export const SliderContext: React.Context<ISliderContext> = React.createContext(
     getLastSlideUri: () => '',
     getPreviousSlideUri: () => '',
     getNextSlideUri: () => '',
+    isActiveSlide: () => false,
   }
 );
 

@@ -16,6 +16,7 @@ export interface ISliderContext {
   getLastSlideUri: () => string;
   getPreviousSlideUri: () => string;
   getNextSlideUri: () => string;
+  isActiveSlide: (lessonKey: number, slideKey: number) => boolean;
 }
 
 export interface ISliderProviderProps extends RouteComponentProps<{}> {

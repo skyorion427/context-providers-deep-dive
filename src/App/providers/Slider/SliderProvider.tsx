@@ -91,6 +91,10 @@ class SliderProvider extends React.Component<
     return lesson && lesson.slides[slideKey];
   };
 
+  isActiveSlide = (lessonKey: number, slideKey: number) =>
+    this.getActiveLessonKey() === lessonKey &&
+    this.getActiveSlideKey() === slideKey;
+
   render() {
     const {lessons, children} = this.props;
     const lessonKey = this.getActiveLessonKey();
@@ -113,6 +117,7 @@ class SliderProvider extends React.Component<
           getLastSlideUri: this.getLastSlideUri,
           getPreviousSlideUri: this.getPreviousSlideUri,
           getNextSlideUri: this.getNextSlideUri,
+          isActiveSlide: this.isActiveSlide,
         }}
       >
         {children}

@@ -13,7 +13,7 @@ import {Main} from './styles';
 import SplashPage from './pages/SplashPage';
 import SliderConsumer from './providers/Slider/SliderConsumer';
 import {ISliderContext} from './providers/Slider/ISliderContext';
-import {ILesson} from '../Lessons/ILesson';
+import {ILesson} from 'Lessons/ILesson';
 import SlidePage from './pages/SlidePage';
 import SliderProvider from 'App/providers/Slider/SliderProvider';
 
