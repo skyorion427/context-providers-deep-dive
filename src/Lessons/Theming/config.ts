@@ -1,5 +1,5 @@
 import theming_00 from './theming_00.md';
-import ThemingDemo from './components/ThemingDemo';
+import ThemingDemo from './App';
 
 export default {
   title: 'Theming',

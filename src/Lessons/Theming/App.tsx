@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {IThemingDemoProps} from './IThemingDemo';
-import ThemeProvider from '../../providers/Theme/ThemeProvider';
+import ThemeProvider from './providers/Theme/ThemeProvider';
 import {ITheme} from 'styles/themes/ITheme';
-import Form from '../Form';
+import Form from './components/Form';
 
 const LightTheme: ITheme = {
   colors: {
@@ -18,12 +17,12 @@ const DarkTheme: ITheme = {
   },
 };
 
-const ThemingDemo: React.SFC<IThemingDemoProps> = props => (
+const App = () => (
   <ThemeProvider themes={[LightTheme, DarkTheme]}>
-    <div {...props}>
+    <div>
       <Form />
     </div>
   </ThemeProvider>
 );
 
-export default ThemingDemo;
+export default App;
