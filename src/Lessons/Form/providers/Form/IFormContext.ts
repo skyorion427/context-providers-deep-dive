@@ -10,7 +10,7 @@ export interface IForm {
 }
 
 export interface IFormContext {
-  form: IForm;
+  formState: IForm;
   handleChange: (key: string) => (e: any) => any;
 }
 

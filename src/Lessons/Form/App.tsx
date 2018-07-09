@@ -27,7 +27,7 @@ const App = () => (
     >
       <Debug />
       <FormConsumer>
-        {({form: formState, handleChange}: IFormContext) => (
+        {({formState, handleChange}: IFormContext) => (
           <form>
             {Object.entries(formState.fields).map(([idx, field]) => (
               <Input

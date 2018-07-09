@@ -15,23 +15,27 @@ class FormProvider extends React.Component<
     };
   }
 
-  handleChange = (key: string) => e =>
+  handleChange = (key: string) => e => {
+    const {form} = this.state;
     this.setState({
       form: {
-        ...this.state.form,
+        ...form,
         fields: {
-          ...this.state.form.fields,
-          [key]: {...this.state.form.fields[key], value: e.target.value},
+          ...form.fields,
+          [key]: {...form.fields[key], value: e.target.value},
         },
       },
     });
+  };
 
   render() {
     const {children} = this.props;
     const {form} = this.state;
 
     return (
-      <FormContext.Provider value={{form, handleChange: this.handleChange}}>
+      <FormContext.Provider
+        value={{formState: form, handleChange: this.handleChange}}
+      >
         {children}
       </FormContext.Provider>
     );
