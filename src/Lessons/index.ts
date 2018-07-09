@@ -1,6 +1,6 @@
 import Overview from './Overview/config';
 import Theming from './Theming/config';
-// import Form from './Form/config';
+import Form from './Form/config';
 // import FormExtended from './FormExtended/config';
 // import Authentication from './Authentication/config';
 // import Model from './Model/config';
@@ -10,7 +10,7 @@ import Theming from './Theming/config';
 export default [
   Overview,
   Theming,
-  // Form,
+  Form,
   // FormExtended,
   // Authentication,
   // Model,

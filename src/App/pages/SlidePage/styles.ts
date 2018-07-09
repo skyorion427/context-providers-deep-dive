@@ -50,10 +50,11 @@ export default (SlidePage: React.SFC<ISlidePageProps>) => styled(SlidePage)`
 
   pre {
     background-color: ${({theme}: IThemeProps) => theme.colors.black.dark};
+    display: block;
+    padding: ${({theme}: IThemeProps) => theme.spacings.sm};
 
     code {
       display: block;
-      padding: ${({theme}: IThemeProps) => theme.spacings.sm};
       font-size: ${({theme}: IThemeProps) => theme.fontSizes.sm};
     }
   }

@@ -1,3 +1,6 @@
+import form_00 from './form_00.md';
+import FormDemo from './App';
+
 export default {
   title: 'Form',
   description: 'The classic example of a Context Provider used for theming.',
@@ -6,15 +9,11 @@ export default {
   slides: [
     {
       title: 'Use Case',
-      content: '',
-    },
-    {
-      title: 'Solution',
-      content: '',
+      content: form_00,
     },
     {
       title: 'Demo',
-      content: '',
+      component: FormDemo,
     },
   ],
 };
