@@ -1,3 +1,6 @@
+import auth_00 from './auth_00.md';
+import auth_01 from './auth_01.md';
+
 export default {
   title: 'Authentication',
   description: 'The classic example of a Context Provider used for theming.',
@@ -6,15 +9,11 @@ export default {
   slides: [
     {
       title: 'Use Case',
-      content: '',
+      content: auth_00,
     },
     {
-      title: 'Solution',
-      content: '',
-    },
-    {
-      title: 'Demo',
-      content: '',
+      title: 'Authenticated User',
+      content: auth_01,
     },
   ],
 };

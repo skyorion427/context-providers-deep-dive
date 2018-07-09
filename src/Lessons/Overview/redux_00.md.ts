@@ -15,7 +15,7 @@ interface IMyComponentProps {
 }
 
 const MyComponent : React.SFC<IMyComponentProps> = ({queryForData}) => (
-  <div {...props}>
+  <div>
     {queryforData.loading && <div>Loading</div>}
     {!queryforData.loading && queryforData.data && (
       <div>{data.foo}</div>
