@@ -4,7 +4,7 @@ export const colors = {
   black: Object.assign(String('#0c0c0c'), {
     base: '#0c0c0c',
     light: '#131313',
-    dark: '#0c0c0c',
+    dark: '#020202',
     pure: '#000000',
   }),
   white: Object.assign(String('#FFFFFF'), {

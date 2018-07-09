@@ -42,6 +42,7 @@ export default () => injectGlobal`
   a {
     color: white;
     text-decoration: none;
+    transition: 0.2s color ease-in-out;
   }
 
   a:hover {

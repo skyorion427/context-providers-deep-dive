@@ -38,6 +38,7 @@ export const Container = styled.div`
 `;
 
 export default (SplashPage: React.SFC<ISplashPageProps>) => styled(SplashPage)`
+  background-color: ${({theme}: IThemeProps) => theme.colors.black.dark};
   position: fixed;
   top: 0;
   left: 0;

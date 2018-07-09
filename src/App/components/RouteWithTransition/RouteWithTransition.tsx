@@ -9,19 +9,24 @@ export const ComponentWithTransition = ({
   path,
   exact,
   blacklist,
-}: any) => ({location, isExact}: any) => (
-  <Transition
-    {...transitionProps}
-    in={
-      !blacklist.filter((item: string) => location.pathname === item).length &&
-      (path ? (exact && isExact) || location.pathname === path : true)
-    }
-    mountOnEnter
-    unmountOnExit
-  >
-    <Component />
-  </Transition>
-);
+  extraProps,
+}: any) => ({location}: any) => {
+  const href = `${location.pathname}${location.search}`;
+  const isExact = path === href;
+  return (
+    <Transition
+      {...transitionProps}
+      in={
+        !blacklist.filter((item: string) => href === item).length &&
+        (exact ? isExact : !href.indexOf(path))
+      }
+      mountOnEnter
+      unmountOnExit
+    >
+      <Component {...extraProps} />
+    </Transition>
+  );
+};
 
 const RouteWithTransition: React.SFC<IRouteWithTransitionProps> = ({
   component: Component,
@@ -30,6 +35,7 @@ const RouteWithTransition: React.SFC<IRouteWithTransitionProps> = ({
   path,
   exact,
   blacklist = [],
+  extraProps = {},
 }) => (
   <Route
     render={ComponentWithTransition({
@@ -39,6 +45,7 @@ const RouteWithTransition: React.SFC<IRouteWithTransitionProps> = ({
       path,
       exact,
       blacklist,
+      extraProps,
     })}
   />
 );

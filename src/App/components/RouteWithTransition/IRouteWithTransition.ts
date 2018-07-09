@@ -8,4 +8,5 @@ export interface IRouteWithTransitionProps
   path?: string;
   exact?: boolean;
   blacklist?: string[];
+  extraProps?: any;
 }

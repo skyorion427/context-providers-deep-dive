@@ -11,18 +11,22 @@ import globalStyles from './styles/global.styles';
 
 import App from './App';
 import ConfigProvider from 'App/providers/Config/ConfigProvider';
+import SliderProvider from 'App/providers/Slider/SliderProvider';
 import config from './App/app.config';
+import lessons from './Lessons';
 
 globalStyles();
 registerServiceWorker();
 
 const render = async (Component: any) => {
   return ReactDOM.render(
-    <ConfigProvider config={config}>
-      <ThemeProvider theme={theme}>
-        <Component history={history} />
-      </ThemeProvider>
-    </ConfigProvider>,
+    <ThemeProvider theme={theme}>
+      <ConfigProvider config={config}>
+        <SliderProvider lessons={lessons}>
+          <Component history={history} />
+        </SliderProvider>
+      </ConfigProvider>
+    </ThemeProvider>,
     document.getElementById('root') as HTMLElement
   );
 };
