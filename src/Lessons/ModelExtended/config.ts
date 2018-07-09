@@ -1,28 +1,27 @@
 export default {
-  title: 'Overview',
-  description:
-    'A brief course introduction to help with setting the `context`, ;)',
+  title: 'Model extended',
+  description: 'The classic example of a Context Provider used for theming.',
   slides: [
     {
-      title: 'Overview',
+      title: 'Use Case',
       content: `
-        # Context Providers...
+        # Preface...
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       `,
     },
     {
-      title: 'History',
+      title: 'Solution',
       content: `
-        # History...
+        # Solution...
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       `,
     },
     {
-      title: 'Why Now?',
+      title: 'Demo',
       content: `
-        # Why Now?...
+        # Demo...
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       `,

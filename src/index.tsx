@@ -11,9 +11,7 @@ import globalStyles from './styles/global.styles';
 
 import App from './App';
 import ConfigProvider from 'App/providers/Config/ConfigProvider';
-import SliderProvider from 'App/providers/Slider/SliderProvider';
 import config from './App/app.config';
-import lessons from './Lessons';
 
 globalStyles();
 registerServiceWorker();
@@ -22,9 +20,7 @@ const render = async (Component: any) => {
   return ReactDOM.render(
     <ThemeProvider theme={theme}>
       <ConfigProvider config={config}>
-        <SliderProvider lessons={lessons}>
-          <Component history={history} />
-        </SliderProvider>
+        <Component history={history} />
       </ConfigProvider>
     </ThemeProvider>,
     document.getElementById('root') as HTMLElement

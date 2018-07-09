@@ -13,6 +13,8 @@ export const SliderContext: React.Context<ISliderContext> = React.createContext(
     getSlideUri: () => '',
     getFirstSlideUri: () => '',
     getLastSlideUri: () => '',
+    getPreviousSlideUri: () => '',
+    getNextSlideUri: () => '',
   }
 );
 

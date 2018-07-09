@@ -30,6 +30,8 @@ const Header: React.SFC<IHeaderProps> = ({...props}) => (
       slidePosition,
       slideKey,
       getSlideUri,
+      getPreviousSlideUri,
+      getNextSlideUri,
     }: ISliderContext) => (
       <header {...props}>
         <Left>
@@ -56,8 +58,12 @@ const Header: React.SFC<IHeaderProps> = ({...props}) => (
                     </Link>
                   </Content>
                   <ButtonWrapper>
-                    <LabelButton to="">Previous</LabelButton>
-                    <LabelButton to="">Next</LabelButton>
+                    <LabelButton to={getPreviousSlideUri()} replace>
+                      Previous
+                    </LabelButton>
+                    <LabelButton to={getNextSlideUri()} replace>
+                      Next
+                    </LabelButton>
                     <IconButton to="">
                       <FontAwesomeIcon icon={faGithub} />
                     </IconButton>

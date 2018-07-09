@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {ILesson} from 'Lessons/ILesson';
 import {ISlide} from 'Lessons/ISlide';
+import {RouteComponentProps} from 'react-router';
 
 export interface ISliderContext {
   lessons: ILesson[];
@@ -13,11 +14,12 @@ export interface ISliderContext {
   getSlideUri: (lessonKey: number, slideKey: number) => string;
   getFirstSlideUri: () => string;
   getLastSlideUri: () => string;
+  getPreviousSlideUri: () => string;
+  getNextSlideUri: () => string;
 }
 
-export interface ISliderProviderProps {
+export interface ISliderProviderProps extends RouteComponentProps<{}> {
   lessons: ILesson[];
-  children: React.ReactNode;
 }
 
 export interface ISliderProviderState {}

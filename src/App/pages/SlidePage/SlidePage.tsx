@@ -12,7 +12,6 @@ const SlidePage: React.SFC<ISlidePageProps> = props => (
       <div {...props}>
         {slide ? (
           <>
-            <h1>{slide.title}</h1>
             <Markdown source={sanitizeTemplateString(slide.content)} />
           </>
         ) : (
