@@ -7,7 +7,7 @@ const App = () => (
   <AuthProvider>
     <AuthConsumer>
       {({isAuthentication, authSession}: IAuthContext) => (
-        isAuthenticated ?
+        isAuthenticated() ?
           <UserProvider uid={authSession.uid}>
             //...
           </UserProvider>
