@@ -5,6 +5,7 @@ import Form from './Form/config';
 import Authentication from './Authentication/config';
 // import Model from './Model/config';
 // import ModelExtended from './ModelExtended/config';
+import Conclusion from './Conclusion/config';
 
 // register lessons
 export default [
@@ -15,4 +16,5 @@ export default [
   Authentication,
   // Model,
   // ModelExtended,
+  Conclusion,
 ];
